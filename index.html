@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Apply for this job</h1>
+        <p><span class="required">*</span> indicates a required field</p>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="firstName">First Name<span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name<span class="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email<span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone<span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="resume">Resume/CV<span class="required">*</span></label>
+                <input type="file" id="resume" name="resume" required>
+            </div>
+
+            <div class="form-group">
+                <label for="coverLetter">Cover Letter</label>
+                <input type="file" id="coverLetter" name="coverLetter">
+            </div>
+
+            <div class="form-group">
+                <label for="preferredFirstName">Preferred First Name</label>
+                <input type="text" id="preferredFirstName" name="preferredFirstName">
+            </div>
+
+            <div class="form-group">
+                <label for="age">Are you 18 years of age or older?<span class="required">*</span></label>
+                <select id="age" name="age" required>
+                    <option value="" disabled selected>Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="currentTitle">Current Title<span class="required">*</span></label>
+                <input type="text" id="currentTitle" name="currentTitle" required>
+            </div>
+
+            <div class="form-group">
+                <label for="currentCompany">Current Company<span class="required">*</span></label>
+                <input type="text" id="currentCompany" name="currentCompany" required>
+            </div>
+
+            <div class="form-group">
+                <label for="citizenship">What's your citizenship / employment eligibility?<span class="required">*</span></label>
+                <select id="citizenship" name="citizenship" required>
+                    <option value="" disabled selected>Select...</option>
+                    <option value="us_citizen">US citizen/permanent resident</option>
+                    <option value="non_citizen_any">Non-citizen allowed to work for any employer</option>
+                    <option value="non_citizen_current">Non-citizen allowed to work for current employer</option>
+                    <option value="non_citizen_seeking">Non-citizen seeking work authorization</option>
+                    <option value="canadian_citizen">Canadian citizen/permanent resident</option>
+                    <option value="au_citizen">AU citizen</option>
+                    <option value="other">Other</option>
+                    <option value="no_answer">No answer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Street Address<span class="required">*</span></label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="suite">Suite/Apt</label>
+                <input type="text" id="suite" name="suite">
+            </div>
+
+            <div class="form-group">
+                <label for="city">City<span class="required">*</span></label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-group">
+                <label for="state">Please enter the state you reside in<span class="required">*</span></label>
+                <input type="text" id="state" name="state" required>
+            </div>
+
+            <div class="form-group">
+                <label for="zip">Zip Code<span class="required">*</span></label>
+                <input type="text" id="zip" name="zip" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Please enter the country you reside in<span class="required">*</span></label>
+                <input type="text" id="country" name="country" required>
+            </div>
+
+            <div class="form-group">
+                <label for="linkedin">LinkedIn Profile</label>
+                <input type="url" id="linkedin" name="linkedin">
+            </div>
+
+            <div class="form-group">
+                <label for="portfolio">Website/Portfolio</label>
+                <input type="url" id="portfolio" name="portfolio">
+            </div>
+
+            <div class="form-group">
+                <label for="hearAboutJob">How did you hear about this job?<span class="required">*</span></label>
+                <input type="text" id="hearAboutJob" name="hearAboutJob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hearAboutShipbob">How did you hear about ShipBob?<span class="required">*</span></label>
+                <input type="text" id="hearAboutShipbob" name="hearAboutShipbob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="salary">What is your desired base salary?<span class="required">*</span></label>
+                <input type="text" id="salary" name="salary" required>
+            </div>
+
+            <div class="form-group">
+                <label for="startDate">What is your desired start date?<span class="required">*</span></label>
+                <input type="date" id="startDate" name="startDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Do you have 2-3 years of transportation experience, specifically working with final mile carriers and routing?<span class="required">*</span></label>
+                <select id="experience" name="experience" required>
+                    <option value="" disabled selected>Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="experienceDetails">If yes, please detail in 2-3 sentences where and when you acquired experience with final mile carrier relationship management and routing.</label>
+                <textarea id="experienceDetails" name="experienceDetails"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="privacyPolicy">Protecting your personal data is our priority. This privacy policy describes and applies to the processing of your personal data by ShipBob. This privacy policy explains your rights and our obligations concerning the processing of your personal data.<span class="required">*</span></label>
+                <select id="privacyPolicy" name="privacyPolicy" required>
+                    <option value="" disabled selected>Select...</option>
+                    <option value="confirm">Confirm</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="accommodation">It is ShipBob’s policy to provide reasonable accommodations to people with disabilities. If you have a disability and wish to discuss a potential accommodation related to completing this application, interviewing, or participating in the employee selection process, please contact talent@shipbob.com.<span class="required">*</span></label>
+                <select id="accommodation" name="accommodation" required>
+                    <option value="" disabled selected>Select...</option>
+                    <option value="understand">I understand</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Please identify your gender:</label>
+                <select id="gender" name="gender">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="non_binary">Non-binary</option>
+                    <option value="prefer_not_to_say">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="race">Which race best describes you?</label>
+                <select id="race" name="race">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="white">White</option>
+                    <option value="black_african">Black or African American</option>
+                    <option value="asian">Asian</option>
+                    <option value="latino_hispanic">Latino or Hispanic</option>
+                    <option value="native_american">Native American</option>
+                    <option value="pacific_islander">Native Hawaiian or Pacific Islander</option>
+                    <option value="two_or_more">Two or more races</option>
+                    <option value="prefer_not_to_say">Prefer not to say</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ethnicity">Ethnicity (optional)</label>
+                <select id="ethnicity" name="ethnicity">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="hispanic_latino">Hispanic or Latino</option>
+                    <option value="non_hispanic_latino">Non-Hispanic or Latino</option>
+                    <option value="prefer_not_to_say">Prefer not to say</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="veteranStatus">Are you a veteran or active service member?</label>
+                <select id="veteranStatus" name="veteranStatus">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="prefer_not_to_say">Prefer not to say</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="disabilityStatus">Do you have a disability?<span class="required">*</span></label>
+                <select id="disabilityStatus" name="disabilityStatus" required>
+                    <option value="" disabled selected>Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="prefer_not_to_say">Prefer not to say</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="lgbtqStatus">Do you identify as LGBTQ+?</label>
+                <select id="lgbtqStatus" name="lgbtqStatus">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="prefer_not_to_say">Prefer not to say</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="pronouns">What are your preferred pronouns?</label>
+                <select id="pronouns" name="pronouns">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="she_her">She/Her</option>
+                    <option value="he_him">He/Him</option>
+                    <option value="they_them">They/Them</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="sexualOrientation">How would you describe your sexual orientation?</label>
+                <select id="sexualOrientation" name="sexualOrientation">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="asexual">Asexual</option>
+                    <option value="bisexual_pansexual">Bisexual and/or Pansexual</option>
+                    <option value="gay">Gay</option>
+                    <option value="heterosexual">Heterosexual</option>
+                    <option value="lesbian">Lesbian</option>
+                    <option value="queer">Queer</option>
+                    <option value="self_describe">I prefer to self-describe</option>
+                    <option value="prefer_not_to_say">I don't wish to answer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit application</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
