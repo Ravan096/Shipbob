@@ -6,7 +6,7 @@ $(document).ready(function () {
 
         values.forEach(function (value) {
             $dropdown.find('option').each(function () {
-                if ($(this).text().trim() === value) {
+                if ($(this).text().trim().toLowerCase() === value.toLowerCase()) {
                     $(this).prop('selected', true);
                 }
             });
@@ -21,7 +21,7 @@ $(document).ready(function () {
         $dropdown.prop('disabled', false).focus();
 
         $dropdown.find('option').each(function () {
-            if ($(this).text().trim() === value) {
+            if ($(this).text().trim().toLowerCase() === value.toLowerCase()) {
                 $(this).prop('selected', true);
                 return false;
             }
@@ -40,11 +40,12 @@ $(document).ready(function () {
         selectMultipleValues('#sexualOrientation', sexualOrientationOptions.slice(0, 8));
     }
 
+    var ageOptions = [];
     $('#age option').each(function () {
         ageOptions.push($(this).text().trim());
     });
 
-    if (ageOptions.includes('Yes')) {
+    if (ageOptions.some(option => option.toLowerCase() === 'yes')) {
         selectSingleValue('#age', 'Yes');
     }
 
