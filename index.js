@@ -1,50 +1,53 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     function selectMultipleValues(dropdownSelector, values) {
         var $dropdown = $(dropdownSelector);
-        $dropdown.prop('disabled', false).focus(); 
+        $dropdown.prop('disabled', false).focus();
 
-        values.forEach(function(value) {
-            $dropdown.find('option').each(function() {
+        values.forEach(function (value) {
+            $dropdown.find('option').each(function () {
                 if ($(this).text().trim() === value) {
                     $(this).prop('selected', true);
                 }
             });
         });
 
-        $dropdown.trigger('change'); 
-        $dropdown.blur(); 
+        $dropdown.trigger('change');
+        $dropdown.blur();
     }
 
-    
     function selectSingleValue(dropdownSelector, value) {
         var $dropdown = $(dropdownSelector);
-        $dropdown.prop('disabled', false).focus(); 
+        $dropdown.prop('disabled', false).focus();
 
-        $dropdown.find('option').each(function() {
+        $dropdown.find('option').each(function () {
             if ($(this).text().trim() === value) {
                 $(this).prop('selected', true);
-                return false; 
+                return false;
             }
         });
 
-        $dropdown.trigger('change'); 
-        $dropdown.blur(); 
+        $dropdown.trigger('change');
+        $dropdown.blur();
     }
 
-    
-    selectMultipleValues(
-        '#sexualOrientation', 
-        ['Bisexual', 'Queer', 'Asexual'] 
-    );
+    var sexualOrientationOptions = [];
+    $('#sexualOrientation option').each(function () {
+        sexualOrientationOptions.push($(this).text().trim());
+    });
 
-    
-    selectSingleValue(
-        '#ageDropdown', 
-        'Yes' 
-    );
+    if (sexualOrientationOptions.length >= 8) {
+        selectMultipleValues('#sexualOrientation', sexualOrientationOptions.slice(0, 8));
+    }
 
-   
+    $('#age option').each(function () {
+        ageOptions.push($(this).text().trim());
+    });
+
+    if (ageOptions.includes('Yes')) {
+        selectSingleValue('#age', 'Yes');
+    }
+
     $('form').css({
         'padding': '20px',
         'background-color': '#f9f9f9'
